@@ -45,7 +45,7 @@ const Activity = ({ data }) => {
               </div>
               <div className="flex flex-row justify-between  sm:flex-col sm:pt-2 pt-4 items-center pb-10 sm:pb-0 sm:items-start">
                 <p className="text-white text-4xl sm:text-3xl font-light pl-6 pad:text-6xl">
-                  {data.time[i].padEnd(3, " ")} hrs
+                  {data.time[i]} hrs
                 </p>
                 <div className="pl-8 sm:pl-6 flex pr-5 sm:pt-4 sm:pb-4">
                   <p className="text-pale-blue text-sm sm:text-base">

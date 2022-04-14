@@ -6,8 +6,8 @@ const Profile = ({ First, Last, selected, setSelected }) => {
 
   return (
     <>
-      <div className="mt-24 sm:mt-0.5 flex flex-col w-full sm:w-[33%] px-8 sm:px-0 sm:pl-8 ">
-        <div className="h-fit sm:h-[100%]  bg-blue rounded-2xl py-8 px-10 relative z-10 flex flex-row sm:flex-col ">
+      <div className="mt-24 sm:mt-0  flex flex-col w-full h-full sm:w-[33%] sm:min-w-fit px-8 sm:px-0 sm:pl-8 min-h-full">
+        <div className="h-fit sm:h-full  bg-blue rounded-2xl py-8 px-8 relative z-10 flex flex-row sm:flex-col  ">
           <div className="flex-none">
             <img
               src={avatar}

@@ -3,12 +3,29 @@ import Profile from "./Components/Profile";
 import Activity from "./Components/Activity";
 import React, { useState } from "react";
 
+import jsondata from "./data.json";
+
 function App() {
   const [selected, setSelected] = useState(1);
+  console.log(jsondata[0].timeframes["weekly"].current);
   const [data, setData] = useState({
     period: "Week",
-    time: ["32", "10", "4", "4", "5", "2"],
-    prev: ["36", "8", "7", "5", "10", "2"],
+    time: [
+      jsondata[0].timeframes["weekly"].current,
+      jsondata[1].timeframes["weekly"].current,
+      jsondata[2].timeframes["weekly"].current,
+      jsondata[3].timeframes["weekly"].current,
+      jsondata[4].timeframes["weekly"].current,
+      jsondata[5].timeframes["weekly"].current,
+    ],
+    prev: [
+      jsondata[0].timeframes["weekly"].previous,
+      jsondata[1].timeframes["weekly"].previous,
+      jsondata[2].timeframes["weekly"].previous,
+      jsondata[3].timeframes["weekly"].previous,
+      jsondata[4].timeframes["weekly"].previous,
+      jsondata[5].timeframes["weekly"].previous,
+    ],
   });
 
   const set = (v) => {
@@ -21,20 +38,62 @@ function App() {
     if (v === 1) {
       dataset = {
         period: "Week",
-        time: ["32", "10", "4", "4", "5", "2"],
-        prev: ["36", "8", "7", "5", "10", "2"],
+        time: [
+          jsondata[0].timeframes["weekly"].current,
+          jsondata[1].timeframes["weekly"].current,
+          jsondata[2].timeframes["weekly"].current,
+          jsondata[3].timeframes["weekly"].current,
+          jsondata[4].timeframes["weekly"].current,
+          jsondata[5].timeframes["weekly"].current,
+        ],
+        prev: [
+          jsondata[0].timeframes["weekly"].previous,
+          jsondata[1].timeframes["weekly"].previous,
+          jsondata[2].timeframes["weekly"].previous,
+          jsondata[3].timeframes["weekly"].previous,
+          jsondata[4].timeframes["weekly"].previous,
+          jsondata[5].timeframes["weekly"].previous,
+        ],
       };
     } else if (v === 2) {
       dataset = {
         period: "Month",
-        time: ["120", "33", "55", "12", "23", "55"],
-        prev: ["110", "31", "51", "11", "11", "1"],
+        time: [
+          jsondata[0].timeframes["monthly"].current,
+          jsondata[1].timeframes["monthly"].current,
+          jsondata[2].timeframes["monthly"].current,
+          jsondata[3].timeframes["monthly"].current,
+          jsondata[4].timeframes["monthly"].current,
+          jsondata[5].timeframes["monthly"].current,
+        ],
+        prev: [
+          jsondata[0].timeframes["monthly"].previous,
+          jsondata[1].timeframes["monthly"].previous,
+          jsondata[2].timeframes["monthly"].previous,
+          jsondata[3].timeframes["monthly"].previous,
+          jsondata[4].timeframes["monthly"].previous,
+          jsondata[5].timeframes["monthly"].previous,
+        ],
       };
     } else if (v === 0) {
       dataset = {
         period: "Day",
-        time: ["12", "3", "5", "1", "2", "5"],
-        prev: ["11", "3", "5", "1", "1", "1"],
+        time: [
+          jsondata[0].timeframes["daily"].current,
+          jsondata[1].timeframes["daily"].current,
+          jsondata[2].timeframes["daily"].current,
+          jsondata[3].timeframes["daily"].current,
+          jsondata[4].timeframes["daily"].current,
+          jsondata[5].timeframes["daily"].current,
+        ],
+        prev: [
+          jsondata[0].timeframes["daily"].previous,
+          jsondata[1].timeframes["daily"].previous,
+          jsondata[2].timeframes["daily"].previous,
+          jsondata[3].timeframes["daily"].previous,
+          jsondata[4].timeframes["daily"].previous,
+          jsondata[5].timeframes["daily"].previous,
+        ],
       };
     } else {
       dataset = {
