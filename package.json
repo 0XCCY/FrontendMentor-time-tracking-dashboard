@@ -2,7 +2,7 @@
   "name": "time-tracking-dashboard-main",
   "version": "0.1.0",
   "private": true,
-  "homagepage": "https://0xccy.github.io/FrontendMentor-time-tracking-dashboard/",
+  "homepage": "https://0xccy.github.io/FrontendMentor-time-tracking-dashboard/",
   "dependencies": {
     "cra-template-simple-tailwindcss": "1.1.0",
     "react": "^18.0.0",
